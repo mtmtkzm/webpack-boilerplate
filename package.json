@@ -5,5 +5,9 @@
   "scripts": {},
   "author": "lig-dsktschy",
   "repository": {},
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8"
+  }
 }
