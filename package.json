@@ -10,6 +10,7 @@
   "repository": {},
   "license": "",
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "webpack": "^4.12.2",
     "webpack-cli": "^3.0.8"
   }
