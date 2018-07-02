@@ -1,12 +1,3 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpackConfigProd = require('./webpack.config.prod')
 
-module.exports = {
-  entry: './src/js/index.js',
-  plugins: [
-    new CleanWebpackPlugin([ 'dist' ])
-  ],
-  output: {
-    filename: 'main.js',
-    path: `${__dirname}/dist/js`
-  }
-}
+module.exports = webpackConfigProd
