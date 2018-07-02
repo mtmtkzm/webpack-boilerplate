@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "Starter kit for webpack-based project",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "build": "webpack"
+  },
   "author": "lig-dsktschy",
   "repository": {},
   "license": "",
