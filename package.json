@@ -5,7 +5,10 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "production": "npm run build"
+    "development": "webpack --config webpack.config.dev.js",
+    "production": "webpack --config webpack.config.prod.js",
+    "dev": "npm run development",
+    "prod": "npm run production"
   },
   "author": "lig-dsktschy",
   "repository": {},
