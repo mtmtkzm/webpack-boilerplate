@@ -1,5 +1,6 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -16,7 +17,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       path: `${__dirname}/dist`
-    })
+    }),
+    new StyleLintPlugin()
   ],
   module: {
     rules: [
