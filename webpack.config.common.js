@@ -10,7 +10,9 @@ module.exports = {
     path: `${__dirname}/dist`
   },
   plugins: [
-    new CleanWebpackPlugin([ 'dist' ]),
+    new CleanWebpackPlugin([
+      'dist'
+    ]),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       path: `${__dirname}/dist`
@@ -19,9 +21,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        use: [
+          'babel-loader'
+        ],
+        exclude: /(node_modules)/
+      },
+      {
         test: /\.css$/,
         use: [
-          { loader: MiniCssExtractPlugin.loader },
+          MiniCssExtractPlugin.loader,
           'css-loader'
         ]
       }
