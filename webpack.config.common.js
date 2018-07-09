@@ -6,7 +6,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 
 module.exports = {
   entry: {
-    bundle: './src/entry.js'
+    bundle: `${__dirname}/src/entry.js`
   },
   output: {
     filename: 'js/[name].js',
@@ -17,7 +17,7 @@ module.exports = {
       filename: 'css/[name].css'
     }),
     new StyleLintPlugin(),
-    new CleanWebpackPlugin([ 'dist' ])
+    new CleanWebpackPlugin([ `${__dirname}/dist` ])
   ],
   module: {
     rules: [
