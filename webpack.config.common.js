@@ -6,34 +6,32 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 
 module.exports = {
   entry: {
-    'bundle': './src/entry.js'
+    bundle: './src/entry.js'
   },
   output: {
     filename: 'js/[name].js',
     path: `${__dirname}/dist`
   },
   plugins: [
-    new CleanWebpackPlugin([
-      'dist'
-    ]),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
-      path: `${__dirname}/dist`
+      filename: 'css/[name].css'
     }),
-    new StyleLintPlugin()
+    new StyleLintPlugin(),
+    new CleanWebpackPlugin([ 'dist' ])
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
+        exclude: /(node_modules)/,
         use: [
           'babel-loader',
           'eslint-loader'
-        ],
-        exclude: /(node_modules)/
+        ]
       },
       {
         test: /\.scss$/,
+        exclude: /(node_modules)/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
