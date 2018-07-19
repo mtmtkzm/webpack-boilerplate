@@ -1,7 +1,7 @@
 {
-  "name": "webpack-starter",
+  "name": "webpack-boilerplate",
   "version": "0.0.0",
-  "description": "Starter kit for webpack-based project",
+  "description": "Boilerplate for webpack-based project",
   "private": true,
   "scripts": {
     "build": "webpack",
